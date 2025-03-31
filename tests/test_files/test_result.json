@@ -1,0 +1,181 @@
+{
+  "bioSafety": [],
+  "cellShape": [],
+  "cellSize": [],
+  "collections": [],
+  "colony": [],
+  "connectedPersons": [],
+  "cultivationMedia": [],
+  "enzymes": [],
+  "fattyAcidProfiles": [
+    {
+      "library": null,
+      "medium": null,
+      "profile": [
+        {
+          "alternateName": [],
+          "ecl": null,
+          "identifier": [],
+          "name": null,
+          "percent": 10.0
+        }
+      ],
+      "software": null,
+      "source": "/sources/0",
+      "temperature": 10
+    }
+  ],
+  "gcContent": [],
+  "halophily": [],
+  "hemolysis": [],
+  "identifier": [],
+  "isolation": [],
+  "knownApplications": [],
+  "legal": [],
+  "literature": [],
+  "metabolites": [],
+  "morphType": null,
+  "motility": [],
+  "multiCellComplexForming": [],
+  "organismType": "Bacteria",
+  "otherMedia": [
+    {
+      "additionalType": null,
+      "description": null,
+      "name": "test",
+      "source": "/sources/0",
+      "url": "https://aaaaaaaa.aa/",
+      "usageInfo": null
+    },
+    {
+      "additionalType": null,
+      "description": null,
+      "name": "test",
+      "source": "/sources/0",
+      "url": "https://bbbbbbbbb.bb/",
+      "usageInfo": null
+    }
+  ],
+  "oxygenRelation": [],
+  "pH": [],
+  "pathogenicity": [],
+  "sample": [
+    {
+      "country": null,
+      "date": null,
+      "description": null,
+      "locationCreated": null,
+      "source": "/sources/0",
+      "tags": [
+        {
+          "level1": "#Host",
+          "level2": "#Fishes",
+          "level3": "#Zebrafish"
+        }
+      ]
+    },
+    {
+      "country": null,
+      "date": null,
+      "description": null,
+      "locationCreated": null,
+      "source": "/sources/0",
+      "tags": [
+        {
+          "level1": "#Host",
+          "level2": "#Fishes",
+          "level3": null
+        }
+      ]
+    }
+  ],
+  "sequences": [],
+  "sources": [
+    {
+      "address": {
+        "addressCountry": "DE",
+        "addressLocality": null,
+        "addressRegion": null,
+        "postOfficeBoxNumber": null,
+        "postalCode": null,
+        "streetAddress": null
+      },
+      "email": null,
+      "identifier": [],
+      "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
+      "name": "DSMZ",
+      "url": null
+    },
+    {
+      "address": {
+        "addressCountry": "DE",
+        "addressLocality": null,
+        "addressRegion": null,
+        "postOfficeBoxNumber": null,
+        "postalCode": null,
+        "streetAddress": null
+      },
+      "email": null,
+      "identifier": [],
+      "legalName": "AAAAAAAAAAAAAAA1",
+      "name": "Source2",
+      "url": null
+    },
+    {
+      "address": {
+        "addressCountry": "DE",
+        "addressLocality": null,
+        "addressRegion": null,
+        "postOfficeBoxNumber": null,
+        "postalCode": null,
+        "streetAddress": null
+      },
+      "email": null,
+      "identifier": [],
+      "legalName": "BBBBBBBBBBBBBBB1",
+      "name": "Source2",
+      "url": null
+    }
+  ],
+  "sporeFormation": [],
+  "stainings": [],
+  "taxon": [
+    {
+      "alternateName": [],
+      "identifier": [],
+      "name": "AAAAAAAAAAAA",
+      "parentTaxon": null,
+      "sameAs": [],
+      "scientificName": null,
+      "source": "/sources/0",
+      "taxonRank": "species",
+      "taxonStatus": "validly published"
+    },
+    {
+      "alternateName": [],
+      "identifier": [],
+      "name": "BBBBBBBBBBBBBBBBBBB",
+      "parentTaxon": null,
+      "sameAs": [],
+      "scientificName": null,
+      "source": "/sources/0",
+      "taxonRank": "species",
+      "taxonStatus": "validly published"
+    }
+  ],
+  "temperature": [],
+  "tolerances": [],
+  "typeStrain": [
+    {
+      "source": "/sources/1",
+      "typeStrain": false
+    },
+    {
+      "source": "/sources/2",
+      "typeStrain": false
+    }
+  ],
+  "unifiedTaxon": null,
+  "unifiedTypeStrain": null,
+  "wallConstituents": []
+}

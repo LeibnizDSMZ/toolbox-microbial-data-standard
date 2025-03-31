@@ -1,0 +1,60 @@
+{
+  "organismType": "Bacteria",
+  "otherMedia": [
+    {
+      "name": "test",
+      "source": [
+        "/sources/0"
+      ],
+      "url": "https://aaaaaaaa.aa"
+    }
+  ],
+  "sample": [
+    {
+      "source": [
+        "/sources/0"
+      ],
+      "tags": [
+        {
+          "level1": "#Host",
+          "level2": "#Fishes",
+          "level3": "#Zebrafish"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "address": {
+        "addressCountry": "DE"
+      },
+      "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
+      "name": "DSMZ"
+    },
+    {
+      "address": {
+        "addressCountry": "DE"
+      },
+      "legalName": "AAAAAAAAAAAAAAA1",
+      "name": "Source2"
+    }
+  ],
+  "taxon": [
+    {
+      "name": "AAAAAAAAAAAA",
+      "source": [
+        "/sources/0"
+      ],
+      "taxonRank": "species",
+      "taxonStatus": "validly published"
+    }
+  ],
+  "typeStrain": [
+    {
+      "source": [
+        "/sources/1"
+      ],
+      "typeStrain": false
+    }
+  ]
+}

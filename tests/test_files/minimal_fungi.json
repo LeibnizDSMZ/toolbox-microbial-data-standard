@@ -1,0 +1,38 @@
+{
+  "organismType": "Fungi",
+  "otherMedia": [
+    {
+      "name": "test",
+      "source": [
+        "/sources/0"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "address": {
+        "addressCountry": "DE"
+      },
+      "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
+      "name": "DSMZ"
+    }
+  ],
+  "taxon": [
+    {
+      "name": "BBBBBBBBBBBBBBBBBBB",
+      "source": [
+        "/sources/0"
+      ],
+      "taxonRank": "species",
+      "taxonStatus": "validly published"
+    }
+  ],
+  "typeStrain": [
+    {
+      "source": [
+        "/sources/1"
+      ],
+      "typeStrain": false
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "fattyAcidProfiles": [
+    {
+      "profile": [
+        {
+          "percent": 10.0
+        }
+      ],
+      "source": [
+        "/sources/0"
+      ],
+      "temperature": 10
+    }
+  ],
+  "organismType": "Bacteria",
+  "otherMedia": [
+    {
+      "name": "test",
+      "source": [
+        "/sources/0"
+      ],
+      "url": "https://bbbbbbbbb.bb"
+    }
+  ],
+  "sample": [
+    {
+      "source": [
+        "/sources/0"
+      ],
+      "tags": [
+        {
+          "level1": "#Host",
+          "level2": "#Fishes"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "address": {
+        "addressCountry": "DE"
+      },
+      "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
+      "name": "DSMZ"
+    },
+    {
+      "address": {
+        "addressCountry": "DE"
+      },
+      "legalName": "BBBBBBBBBBBBBBB1",
+      "name": "Source2"
+    }
+  ],
+  "taxon": [
+    {
+      "name": "BBBBBBBBBBBBBBBBBBB",
+      "source": [
+        "/sources/0"
+      ],
+      "taxonRank": "species",
+      "taxonStatus": "validly published"
+    }
+  ],
+  "typeStrain": [
+    {
+      "source": [
+        "/sources/1"
+      ],
+      "typeStrain": false
+    }
+  ]
+}

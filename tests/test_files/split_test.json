@@ -1,0 +1,172 @@
+{
+  "bioSafety": [],
+  "cellShape": [],
+  "cellSize": [],
+  "collections": [],
+  "colony": [],
+  "connectedPersons": [],
+  "cultivationMedia": [],
+  "enzymes": [],
+  "fattyAcidProfiles": [],
+  "gcContent": [],
+  "halophily": [],
+  "hemolysis": [],
+  "identifier": [
+    {
+      "name": "cccc",
+      "source": [
+        "/sources/2"
+      ],
+      "value": "CCCC"
+    }
+  ],
+  "isolation": [],
+  "knownApplications": [],
+  "legal": [],
+  "literature": [],
+  "metabolites": [],
+  "morphType": null,
+  "motility": [],
+  "multiCellComplexForming": [],
+  "organismType": "Bacteria",
+  "otherMedia": [
+    {
+      "additionalType": null,
+      "description": null,
+      "name": "source A media",
+      "source": [
+        "/sources/0"
+      ],
+      "url": "https://aaaaaaaa.aa/",
+      "usageInfo": null
+    },
+    {
+      "additionalType": null,
+      "description": null,
+      "name": "source B media",
+      "source": [
+        "/sources/1"
+      ],
+      "url": "https://bbbbbbbb.bb/",
+      "usageInfo": null
+    },
+    {
+      "additionalType": null,
+      "description": null,
+      "name": "source B media",
+      "source": [
+        "/sources/2"
+      ],
+      "url": "https://cccccccc.cc/",
+      "usageInfo": null
+    }
+  ],
+  "oxygenRelation": [],
+  "pathogenicity": [],
+  "ph": [],
+  "sample": [
+    {
+      "country": null,
+      "date": null,
+      "description": null,
+      "locationCreated": null,
+      "source": [
+        "/sources/0",
+        "/sources/1",
+        "/sources/2"
+      ],
+      "tags": [
+        {
+          "level1": "#Host",
+          "level2": "#Fishes",
+          "level3": "#Zebrafish"
+        }
+      ]
+    }
+  ],
+  "sequences": [],
+  "sources": [
+    {
+      "address": null,
+      "email": null,
+      "identifier": [],
+      "legalName": "AAAAAAAA",
+      "name": "A",
+      "url": null
+    },
+    {
+      "address": null,
+      "email": null,
+      "identifier": [],
+      "legalName": "BBBBBBB",
+      "name": "B",
+      "url": null
+    },
+    {
+      "address": null,
+      "email": null,
+      "identifier": [],
+      "legalName": "CCCCCCC",
+      "name": "C",
+      "url": null
+    }
+  ],
+  "sporeFormation": [],
+  "stainings": [],
+  "taxon": [
+    {
+      "alternateName": [],
+      "identifier": [],
+      "name": "aaaa",
+      "parentTaxon": null,
+      "sameAs": [],
+      "scientificName": null,
+      "source": [
+        "/sources/0"
+      ],
+      "taxonRank": "species",
+      "taxonStatus": "validly published"
+    },
+    {
+      "alternateName": [],
+      "identifier": [],
+      "name": "bbbb",
+      "parentTaxon": null,
+      "sameAs": [],
+      "scientificName": null,
+      "source": [
+        "/sources/1"
+      ],
+      "taxonRank": "species",
+      "taxonStatus": "validly published"
+    },
+    {
+      "alternateName": [],
+      "identifier": [],
+      "name": "cccc",
+      "parentTaxon": null,
+      "sameAs": [],
+      "scientificName": null,
+      "source": [
+        "/sources/2"
+      ],
+      "taxonRank": "species",
+      "taxonStatus": "validly published"
+    }
+  ],
+  "temperature": [],
+  "tolerances": [],
+  "typeStrain": [
+    {
+      "source": [
+        "/sources/0",
+        "/sources/1",
+        "/sources/2"
+      ],
+      "typeStrain": false
+    }
+  ],
+  "unifiedTaxon": null,
+  "unifiedTypeStrain": null,
+  "wallConstituents": []
+}
