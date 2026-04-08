@@ -1,15 +1,6 @@
 {
   "organismType": "Bacteria",
-  "otherMedia": [
-    {
-      "name": "test",
-      "source": [
-        "/sources/0"
-      ],
-      "url": "https://aaaaaaaa.aa"
-    }
-  ],
-  "sample": [
+  "origin": [
     {
       "source": [
         "/sources/0"
@@ -23,20 +14,44 @@
       ]
     }
   ],
+  "otherMedia": [
+    {
+      "name": "test",
+      "source": [
+        "/sources/0"
+      ],
+      "url": "https://aaaaaaaa.aa"
+    }
+  ],
+  "primaryId": "test1",
   "sources": [
     {
-      "address": {
-        "addressCountry": "DE"
-      },
-      "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
-      "name": "DSMZ"
+      "mode": "automated",
+      "name": "DSMZ",
+      "publisher": [
+        {
+          "address": {
+            "addressCountry": "DE"
+          },
+          "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
+          "name": "DSMZ"
+        }
+      ],
+      "sourceType": "dataset"
     },
     {
-      "address": {
-        "addressCountry": "DE"
-      },
-      "legalName": "AAAAAAAAAAAAAAA1",
-      "name": "Source2"
+      "mode": "automated",
+      "name": "DSMZ 2",
+      "publisher": [
+        {
+          "address": {
+            "addressCountry": "DE"
+          },
+          "legalName": "AAAAAAAAAAAAAAA1",
+          "name": "Source2"
+        }
+      ],
+      "sourceType": "dataset"
     }
   ],
   "taxon": [

@@ -1,10 +1,6 @@
 {
   "bioSafety": [],
-  "cellShape": [],
-  "cellSize": [],
   "collections": [],
-  "colony": [],
-  "connectedPersons": [],
   "cultivationMedia": [],
   "enzymes": [],
   "fattyAcidProfiles": [],
@@ -12,32 +8,15 @@
   "halophily": [],
   "hemolysis": [],
   "identifier": [],
-  "isolation": [],
   "knownApplications": [],
   "legal": [],
   "literature": [],
   "metabolites": [],
   "morphType": null,
-  "motility": [],
-  "multiCellComplexForming": [],
   "organismType": "Bacteria",
-  "otherMedia": [
-    {
-      "additionalType": null,
-      "description": null,
-      "name": "test",
-      "source": "/sources/0",
-      "url": "https://aaaaaaaa.aa/",
-      "usageInfo": null
-    }
-  ],
-  "oxygenRelation": [],
-  "pH": [],
-  "pathogenicity": [],
-  "sample": [
+  "origin": [
     {
       "country": null,
-      "date": null,
       "description": null,
       "locationCreated": null,
       "source": "/sources/0",
@@ -50,41 +29,67 @@
       ]
     }
   ],
+  "otherMedia": [
+    {
+      "additionalType": null,
+      "description": null,
+      "name": "test",
+      "source": "/sources/0",
+      "url": "https://aaaaaaaa.aa/",
+      "usageInfo": null
+    }
+  ],
+  "pathogenicity": [],
+  "primaryId": "test_write_result",
   "sequences": [],
   "sources": [
     {
-      "address": {
-        "addressCountry": "DE",
-        "addressLocality": null,
-        "addressRegion": null,
-        "postOfficeBoxNumber": null,
-        "postalCode": null,
-        "streetAddress": null
-      },
-      "email": null,
-      "identifier": [],
-      "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
+      "mode": "automated",
       "name": "DSMZ",
-      "url": null
+      "publisher": [
+        {
+          "address": {
+            "addressCountry": "DE",
+            "addressLocality": null,
+            "addressRegion": null,
+            "postOfficeBoxNumber": null,
+            "postalCode": null,
+            "streetAddress": null
+          },
+          "email": null,
+          "identifier": [],
+          "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
+          "name": "DSMZ",
+          "url": null
+        }
+      ],
+      "sourceType": "dataset"
     },
     {
-      "address": {
-        "addressCountry": "DE",
-        "addressLocality": null,
-        "addressRegion": null,
-        "postOfficeBoxNumber": null,
-        "postalCode": null,
-        "streetAddress": null
-      },
-      "email": null,
-      "identifier": [],
-      "legalName": "AAAAAAAAAAAAAAA1",
+      "mode": "automated",
       "name": "Source2",
-      "url": null
+      "publisher": [
+        {
+          "address": {
+            "addressCountry": "DE",
+            "addressLocality": null,
+            "addressRegion": null,
+            "postOfficeBoxNumber": null,
+            "postalCode": null,
+            "streetAddress": null
+          },
+          "email": null,
+          "identifier": [],
+          "legalName": "AAAAAAAAAAAAAAA1",
+          "name": "Source2",
+          "url": null
+        }
+      ],
+      "sourceType": "dataset"
     }
   ],
   "sporeFormation": [],
-  "stainings": [],
+  "staining": [],
   "taxon": [
     {
       "alternateName": [],
@@ -98,7 +103,6 @@
       "taxonStatus": "validly published"
     }
   ],
-  "temperature": [],
   "tolerances": [],
   "typeStrain": [
     {

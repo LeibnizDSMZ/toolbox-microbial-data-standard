@@ -1,7 +1,6 @@
 import pytest
 
-from microbial_strain_data_model.classes.actors import Organization
-from microbial_strain_data_model.microbe import Microbe
+from microbial_strain_data_model.strain import Strain, Source
 
 from toolbox_microbial_strain_data import split
 from toolbox_microbial_strain_data.io_functions import (
@@ -10,21 +9,35 @@ from toolbox_microbial_strain_data.io_functions import (
 
 
 @pytest.fixture
-def micro() -> Microbe:
+def micro() -> Strain:
     data = load_microbial_strain_data("./tests/test_files/split_test.json")
     return data
 
 
-def test_integration_split_object(micro: Microbe) -> None:
-    source_dict = {"name": "B", "legalName": "BBBBBBB"}
-    extract_source = Organization.model_validate(source_dict)
+def test_integration_split_object(micro: Strain) -> None:
+    source_dict = {
+        "sourceType": "dataset",
+        "mode": "automated",
+        "name": "B",
+        "publisher": [
+            {
+                "address": None,
+                "email": None,
+                "identifier": [],
+                "legalName": "BBBBBBB",
+                "name": "B",
+                "url": None,
+            }
+        ],
+    }
+    extract_source = Source.model_validate(source_dict)
 
     micro_purged, micro_extracted = split.split_data_by_source_object(
         micro, extract_source
     )
 
-    assert Microbe.model_validate(micro_purged)
-    assert Microbe.model_validate(micro_extracted)
+    assert Strain.model_validate(micro_purged)
+    assert Strain.model_validate(micro_extracted)
 
     assert extract_source not in micro_purged.sources
     assert extract_source in micro_extracted.sources
@@ -38,20 +51,38 @@ def test_integration_split_object(micro: Microbe) -> None:
     assert "/sources/2" not in str(micro_extracted.model_dump_json())
 
 
-def test_integration_split_object_error(micro: Microbe) -> None:
-    org = Organization.model_validate({"legalName": "ZZZZZ", "name": "Z"})
-    with pytest.raises(ValueError, match=r"Organization\(name='Z'.*"):
+def test_integration_split_object_error(micro: Strain) -> None:
+    org = Source.model_validate(
+        {"sourceType": "dataset", "mode": "automated", "name": "Z"}
+    )
+    with pytest.raises(
+        ValueError, match=r"Source\(sourceType=<SourceType.dataset: 'dataset'>,*"
+    ):
         split.split_data_by_source_object(micro, org)
 
 
-def test_integration_split_index(micro: Microbe) -> None:
-    source_dict = {"name": "B", "legalName": "BBBBBBB"}
-    extract_source = Organization.model_validate(source_dict)
+def test_integration_split_index(micro: Strain) -> None:
+    source_dict = {
+        "sourceType": "dataset",
+        "mode": "automated",
+        "name": "B",
+        "publisher": [
+            {
+                "address": None,
+                "email": None,
+                "identifier": [],
+                "legalName": "BBBBBBB",
+                "name": "B",
+                "url": None,
+            }
+        ],
+    }
+    extract_source = Source.model_validate(source_dict)
 
     micro_purged, micro_extracted = split.split_data_by_source_index(micro, 1)
 
-    assert Microbe.model_validate(micro_purged)
-    assert Microbe.model_validate(micro_extracted)
+    assert Strain.model_validate(micro_purged)
+    assert Strain.model_validate(micro_extracted)
 
     assert extract_source not in micro_purged.sources
     assert extract_source in micro_extracted.sources
@@ -65,7 +96,7 @@ def test_integration_split_index(micro: Microbe) -> None:
     assert "/sources/2" not in str(micro_extracted.model_dump_json())
 
 
-def test_integration_split_index_error(micro: Microbe) -> None:
+def test_integration_split_index_error(micro: Strain) -> None:
 
     with pytest.raises(
         IndexError, match=r"The source index 3 is out of range maximal index: 2"

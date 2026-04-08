@@ -8,21 +8,11 @@
       ],
       "source": [
         "/sources/0"
-      ],
-      "temperature": 10
+      ]
     }
   ],
   "organismType": "Bacteria",
-  "otherMedia": [
-    {
-      "name": "test",
-      "source": [
-        "/sources/0"
-      ],
-      "url": "https://bbbbbbbbb.bb"
-    }
-  ],
-  "sample": [
+  "origin": [
     {
       "source": [
         "/sources/0"
@@ -35,20 +25,44 @@
       ]
     }
   ],
+  "otherMedia": [
+    {
+      "name": "test",
+      "source": [
+        "/sources/0"
+      ],
+      "url": "https://bbbbbbbbb.bb"
+    }
+  ],
+  "primaryId": "test2",
   "sources": [
     {
-      "address": {
-        "addressCountry": "DE"
-      },
-      "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
-      "name": "DSMZ"
+      "mode": "automated",
+      "name": "DSMZ",
+      "publisher": [
+        {
+          "address": {
+            "addressCountry": "DE"
+          },
+          "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
+          "name": "DSMZ"
+        }
+      ],
+      "sourceType": "dataset"
     },
     {
-      "address": {
-        "addressCountry": "DE"
-      },
-      "legalName": "BBBBBBBBBBBBBBB1",
-      "name": "Source2"
+      "mode": "automated",
+      "name": "Source2",
+      "publisher": [
+        {
+          "address": {
+            "addressCountry": "DE"
+          },
+          "legalName": "BBBBBBBBBBBBBBB1",
+          "name": "Source2"
+        }
+      ],
+      "sourceType": "dataset"
     }
   ],
   "taxon": [

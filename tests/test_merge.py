@@ -5,8 +5,7 @@ from toolbox_microbial_strain_data.io_functions import (
     load_microbial_strain_data,
 )
 
-from microbial_strain_data_model.classes.actors import Person, Organization
-from microbial_strain_data_model.classes.literature import Literature
+from microbial_strain_data_model.classes.source import Source, SourceType, CurationMode
 
 
 def test_integration_merge() -> None:
@@ -20,14 +19,38 @@ def test_integration_merge() -> None:
 
 def test_unit_build_source_mapping() -> None:
     list_a = [
-        Literature(name="A literature", source=["/sources/0"]),
-        Person(name="A Person"),
-        Organization(name="A Organisation"),
+        Source(
+            sourceType=SourceType("literature"),
+            mode=CurationMode("automated"),
+            name="A literature",
+        ),
+        Source(
+            sourceType=SourceType("website"),
+            mode=CurationMode("automated"),
+            name="A Person",
+        ),
+        Source(
+            sourceType=SourceType("dataset"),
+            mode=CurationMode("automated"),
+            name="A Organisation",
+        ),
     ]
     list_b = [
-        Literature(name="B literature", source=["/sources/0"]),
-        Person(name="A Person"),
-        Organization(name="B Organisation"),
+        Source(
+            sourceType=SourceType("literature"),
+            mode=CurationMode("automated"),
+            name="B literature",
+        ),
+        Source(
+            sourceType=SourceType("website"),
+            mode=CurationMode("automated"),
+            name="A Person",
+        ),
+        Source(
+            sourceType=SourceType("dataset"),
+            mode=CurationMode("automated"),
+            name="B Organisation",
+        ),
     ]
 
     # mapping includes for str from list_b the new strings for merged result

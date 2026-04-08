@@ -1,7 +1,6 @@
+import uuid
 from copy import deepcopy
-from microbial_strain_data_model.microbe import Microbe
-from microbial_strain_data_model.classes.actors import Person, Organization
-from microbial_strain_data_model.classes.literature import Literature
+from microbial_strain_data_model.strain import Source, Strain
 
 from toolbox_microbial_strain_data.util import _Source
 
@@ -17,8 +16,8 @@ def _fix_source_strings(obj_list: list[_Source], removed_source_id: int) -> None
 
 
 def split_data_by_source_index(
-    orig_micro: Microbe, split_source_id: int
-) -> tuple[Microbe, Microbe]:
+    orig_micro: Strain, split_source_id: int
+) -> tuple[Strain, Strain]:
 
     if split_source_id >= len(orig_micro.sources):
         raise IndexError(
@@ -30,7 +29,8 @@ maximal index: {len(orig_micro.sources)-1}"
     split_source_str = f"/sources/{split_source_id}"
 
     # define output file
-    extracted_data = Microbe(
+    extracted_data = Strain(
+        primaryId=str(uuid.uuid4()),
         organismType=deepcopy(orig_micro.organismType),
         typeStrain=deepcopy(orig_micro.typeStrain),
         taxon=deepcopy(orig_micro.taxon),
@@ -68,8 +68,8 @@ maximal index: {len(orig_micro.sources)-1}"
 
 
 def split_data_by_source_object(
-    orig_micro: Microbe, split_source: Person | Organization | Literature
-) -> tuple[Microbe, Microbe]:
+    orig_micro: Strain, split_source: Source
+) -> tuple[Strain, Strain]:
     try:
         source_index = orig_micro.sources.index(split_source)
     except ValueError as err:

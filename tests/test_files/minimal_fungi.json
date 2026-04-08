@@ -8,13 +8,21 @@
       ]
     }
   ],
+  "primaryId": "test_fungi",
   "sources": [
     {
-      "address": {
-        "addressCountry": "DE"
-      },
-      "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
-      "name": "DSMZ"
+      "mode": "automated",
+      "name": "DSMZ",
+      "publisher": [
+        {
+          "address": {
+            "addressCountry": "DE"
+          },
+          "legalName": "Leibniz Institut: Deutsche Sammlung f\u00fcr Microorganismen und Zellkulturen, GmbH",
+          "name": "DSMZ"
+        }
+      ],
+      "sourceType": "dataset"
     }
   ],
   "taxon": [

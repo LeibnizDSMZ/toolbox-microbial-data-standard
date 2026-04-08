@@ -10,7 +10,7 @@ repository = "https://gitlab.int.dsmz.de/bioindustry-4/toolbox_microbial_strain_
 requires-python = ">=3.13,<4"
 dependencies = [
   "deepdiff >=8.2.0,<9",
-  "microbial_strain_data_model @ git+https://github.com/LeibnizDSMZ/microbial-data-standard.git"
+  "microbial_strain_data_model @ git+https://github.com/LeibnizDSMZ/microbial-data-standard.git@v0.9.1"
 ]
 [tool.poetry]
 packages = [{ include = "toolbox_microbial_strain_data", from = "src" }]

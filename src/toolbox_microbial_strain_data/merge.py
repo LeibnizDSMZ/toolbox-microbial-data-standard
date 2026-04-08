@@ -1,6 +1,4 @@
-from microbial_strain_data_model.microbe import Microbe
-from microbial_strain_data_model.classes.actors import Person, Organization
-from microbial_strain_data_model.classes.literature import Literature
+from microbial_strain_data_model.strain import Source, Strain
 
 from toolbox_microbial_strain_data.util import get_obj_if_in, _Source
 
@@ -11,7 +9,7 @@ def _merge_object_source(left_obj: _Source, right_obj: _Source) -> None:
             left_obj.source.append(right_source)
 
 
-def _check_constrains(l_mi: Microbe, r_mi: Microbe) -> bool:
+def _check_constrains(l_mi: Strain, r_mi: Strain) -> bool:
     """Hard constrains, add more if necessary"""
 
     # check if organism types are equal
@@ -23,8 +21,8 @@ def _check_constrains(l_mi: Microbe, r_mi: Microbe) -> bool:
 
 
 def _build_source_mapping(
-    left_source_list: list[Person | Organization | Literature],
-    right_source_list: list[Person | Organization | Literature],
+    left_source_list: list[Source],
+    right_source_list: list[Source],
 ) -> dict[str, str]:
     """
     make a dict that has the strings of the right sources link as key, mapping
@@ -48,7 +46,7 @@ def _build_source_mapping(
     return source_mapping
 
 
-def merge_microbes(left_microbe: Microbe, right_microbe: Microbe) -> Microbe:
+def merge_microbes(left_microbe: Strain, right_microbe: Strain) -> Strain:
     """
     Merging two microbe objects
     Step 1: Check hard constrains, e.g. organism type must be equal
