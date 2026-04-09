@@ -45,7 +45,7 @@ dataset_2 = io_functions.load_microbial_strain_data("PATH/TO/INPUT-FILE-2.json")
 
 # if dataset_1 and dataset_2 are about the same strain you can merge them with:
 
-merged_dataset = merge.merge_microbes(dataset_1, dataset_2)
+merged_dataset = merge.merge_strains(dataset_1, dataset_2)
 ```
 The merged dataset will automatically join the lists of sources, skipping source duplicates.
 Every datapoint with a source information in the datasets will be merged if it is an exact
@@ -66,7 +66,7 @@ source_to_split = "ANY_TYPE_OF_SOURCE_OBJECT"
 data_without_this_source, data_of_split_source = split.split_data_by_source(dataset, source_to_split)
 ```
 Splitting a dataset by providing the data set and the source whose data should be split
-from the original file. Returns two datasets, both of type `Microbe`.
+from the original file. Returns two datasets, both of type `Strain`.
 
 ### Split by source index
 ```python
@@ -81,4 +81,4 @@ source_index_to_split = 1 # splits of the data from sources index 1
 data_without_this_source, data_of_split_source = split.split_data_by_source_index(dataset, source_index_to_split)
 ```
 Splitting a dataset by providing the index of the source whose data should be split
-from the original file. Returns two datasets, both of type `Microbe`.
+from the original file. Returns two datasets, both of type `Strain`.

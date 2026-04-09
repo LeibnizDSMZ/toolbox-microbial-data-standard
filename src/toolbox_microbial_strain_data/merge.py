@@ -39,42 +39,42 @@ def _build_source_mapping(
             source_mapping[f"/sources/{source_obj_index}"] = (
                 f"/sources/{left_source_list.index(source_obj)}"
             )
-        else:  # not in left_microbe.sources
+        else:  # not in left_strain.sources
             source_mapping[f"/sources/{source_obj_index}"] = f"/sources/{left_len + n}"
             n += 1
     left_source_list.extend([x for x in right_source_list if x not in left_source_list])
     return source_mapping
 
 
-def merge_microbes(left_microbe: Strain, right_microbe: Strain) -> Strain:
+def merge_strains(left_strain: Strain, right_strain: Strain) -> Strain:
     """
-    Merging two microbe objects
+    Merging two strain objects
     Step 1: Check hard constrains, e.g. organism type must be equal
     Step 2: Make source number mapping and extend source list
     Step 3: Rearrange data and fix source links with new numbers from mapping
     """
 
     # Step 1
-    _check_constrains(left_microbe, right_microbe)
+    _check_constrains(left_strain, right_strain)
 
     # Step2
-    source_map = _build_source_mapping(left_microbe.sources, right_microbe.sources)
+    source_map = _build_source_mapping(left_strain.sources, right_strain.sources)
 
     # Step 3
     # merging all lists of objects from right into left and replace source string with
     # the value in dictionary named "source_map" for the old string as key
-    for key_right, value_right in right_microbe:
-        if isinstance(value_right, list) and value_right is not right_microbe.sources:
+    for key_right, value_right in right_strain:
+        if isinstance(value_right, list) and value_right is not right_strain.sources:
             for data_obj_right in value_right:
                 new_source = []
                 for source_str in data_obj_right.source:
                     new_source.append(source_map[source_str])
                 data_obj_right.source = new_source
 
-                same_obj = get_obj_if_in(getattr(left_microbe, key_right), data_obj_right)
+                same_obj = get_obj_if_in(getattr(left_strain, key_right), data_obj_right)
                 if same_obj:
                     _merge_object_source(same_obj, data_obj_right)
                 else:
-                    getattr(left_microbe, key_right).append(data_obj_right)
+                    getattr(left_strain, key_right).append(data_obj_right)
 
-    return left_microbe
+    return left_strain

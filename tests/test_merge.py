@@ -13,7 +13,7 @@ def test_integration_merge() -> None:
     assert len(micro_left.sources) == 2
     micro_right = load_microbial_strain_data("./tests/test_files/merge_test_b.json")
     assert len(micro_right.sources) == 2
-    mm = merge.merge_microbes(micro_left, micro_right)
+    mm = merge.merge_strains(micro_left, micro_right)
     assert len(mm.sources) == 3
 
 
