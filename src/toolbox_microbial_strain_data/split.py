@@ -2,10 +2,10 @@ import uuid
 from copy import deepcopy
 from microbial_strain_data_model.strain import Source, Strain
 
-from toolbox_microbial_strain_data.util import _Source
+from toolbox_microbial_strain_data.util import _JsonLink
 
 
-def _fix_source_strings(obj_list: list[_Source], removed_source_id: int) -> None:
+def _fix_source_strings(obj_list: list[_JsonLink], removed_source_id: int) -> None:
     # fix all source pointers with new_index > deleted_source_entry_index,
     # because one source got removed, by decrementing the value by 1
     for data_obj in obj_list:

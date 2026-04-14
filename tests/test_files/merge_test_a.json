@@ -1,4 +1,24 @@
 {
+  "cultivationMedia": [
+    {
+      "name": "test medium 1",
+      "relatedData": [
+        "/relatedData/0"
+      ],
+      "source": [
+        "/sources/0"
+      ]
+    },
+    {
+      "name": "test medium 2",
+      "relatedData": [
+        "/relatedData/1"
+      ],
+      "source": [
+        "/sources/0"
+      ]
+    }
+  ],
   "organismType": "Bacteria",
   "origin": [
     {
@@ -24,6 +44,20 @@
     }
   ],
   "primaryId": "test1",
+  "relatedData": [
+    {
+      "relation": "test relation 1",
+      "source": [
+        "/sources/0"
+      ]
+    },
+    {
+      "relation": "test relation 2",
+      "source": [
+        "/sources/0"
+      ]
+    }
+  ],
   "sources": [
     {
       "mode": "automated",
