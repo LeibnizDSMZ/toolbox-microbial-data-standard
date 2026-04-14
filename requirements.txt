@@ -130,7 +130,7 @@ jsonschema-specifications==2024.10.1 ; python_version >= "3.13" and python_versi
 jsonschema==4.23.0 ; python_version >= "3.13" and python_version < "4" \
     --hash=sha256:d71497fef26351a33265337fa77ffeb82423f3ea21283cd9467bb03999266bc4 \
     --hash=sha256:fbadb6f8b144a8f8cf9f0b89ba94501d143e50411a1278633f56a7acf7fd5566
-microbial-strain-data-model @ git+https://github.com/LeibnizDSMZ/microbial-data-standard.git@0b6d040957629df63babafa6e0c89913dbf6eb5f ; python_version >= "3.13" and python_version < "4"
+microbial-strain-data-model @ git+https://github.com/LeibnizDSMZ/microbial-data-standard.git@e55035cf8c4dc0d539d3a55a2f4c7c9970938996 ; python_version >= "3.13" and python_version < "4"
 numpy==2.4.4 ; python_version >= "3.13" and python_version < "4" \
     --hash=sha256:07077278157d02f65c43b1b26a3886bce886f95d20aabd11f87932750dfb14ed \
     --hash=sha256:08f2e31ed5e6f04b118e49821397f12767934cfdd12a1ce86a058f91e004ee50 \
