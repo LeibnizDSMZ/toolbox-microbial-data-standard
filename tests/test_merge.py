@@ -57,7 +57,7 @@ def test_unit_build_source_mapping() -> None:
     ]
 
     # mapping includes for str from list_b the new strings for merged result
-    mapping = merge._build_json_link_mapping(list_a, list_b, type="sources")
+    mapping = merge._build_json_link_mapping(list_a, list_b, "sources")
 
     assert isinstance(mapping, dict)
     assert len(mapping.keys()) == 3

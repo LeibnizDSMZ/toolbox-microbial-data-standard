@@ -9,7 +9,7 @@ keywords = ["python", "data"]
 repository = "https://gitlab.int.dsmz.de/bioindustry-4/toolbox_microbial_strain_data"
 requires-python = ">=3.13,<4"
 dependencies = [
-  "deepdiff >=8.2.0,<9",
+  "deepdiff >=9.0.0,<10",
   "microbial_strain_data_model @ git+https://github.com/LeibnizDSMZ/microbial-data-standard.git"
 ]
 [tool.poetry]
