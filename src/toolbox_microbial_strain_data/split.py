@@ -1,8 +1,12 @@
+from typing import Protocol
 import uuid
 from copy import deepcopy
 from microbial_strain_data_model.strain import Source, Strain
 
-from toolbox_microbial_strain_data.util import _JsonLink
+
+class _JsonLink(Protocol):
+    source: list[str]
+    relatedData: list[str]  # noqa: N815
 
 
 def _fix_source_strings(obj_list: list[_JsonLink], removed_source_id: int) -> None:
