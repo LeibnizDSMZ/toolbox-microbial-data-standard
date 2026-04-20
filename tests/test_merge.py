@@ -18,7 +18,23 @@ def test_integration_merge() -> None:
     mm = merge.merge_strains(micro_left, micro_right)
     assert len(mm.sources) == 3
     assert len(mm.relatedData) == 3
+    
+    assert mm.sources[0].name == "DSMZ"
+    assert mm.sources[1].name == "DSMZ 2"
+    assert mm.sources[2].name == "Source2"
+    
+    assert mm.relatedData[0].relation == "test relation 1"
+    assert mm.relatedData[1].relation == "test relation 2"
+    assert mm.relatedData[2].relation == "test relation 3"
 
+
+    assert len(mm.cultivationMedia) == 2
+
+    assert mm.cultivationMedia[0].source == ["/sources/0"]
+    assert mm.cultivationMedia[0].relatedData == ["/relatedData/0"]
+    
+    assert mm.cultivationMedia[1].source == ["/sources/1", "/sources/2"]
+    assert mm.cultivationMedia[1].relatedData == ["/relatedData/1", "/relatedData/2"]
 
 def test_unit_build_source_mapping() -> None:
     list_a = [

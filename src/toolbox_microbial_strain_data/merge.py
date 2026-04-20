@@ -8,6 +8,7 @@ from microbial_strain_data_model.classes.person import Person
 from microbial_strain_data_model.classes.address import Address
 from pydantic import EmailStr, HttpUrl
 from pydantic_extra_types.country import CountryAlpha2
+from pydantic_extra_types.pendulum_dt import Date
 
 
 class _JsonLink(Protocol):
@@ -65,7 +66,7 @@ def _organization_key(
 
 def _source_key(
     obj: Source,
-) -> tuple[str | None | HttpUrl | EmailStr | CountryAlpha2, ...]:
+) -> tuple[Date |str | None | HttpUrl | EmailStr | CountryAlpha2, ...]:
     return (
         obj.sourceType,
         obj.mode,
@@ -80,7 +81,7 @@ def _source_key(
     )
 
 
-def _related_data_key(obj: RelatedData) -> tuple[str | SourceLink]:
+def _related_data_key(obj: RelatedData) -> tuple[str | SourceLink, ...]:
     return (obj.relation, *(src for src in obj.source))
 
 
@@ -198,9 +199,9 @@ def merge_strains(left_strain: Strain, right_strain: Strain) -> Strain:
 
         attr_left = getattr(left_strain, key_right)
         deep_hash = {
-            DeepHash(ele, exclude_paths=["source", "relatedData"])[ele]: ele
+            DeepHash((ele_d := ele.model_dump()), exclude_paths=["source", "relatedData"])[ele_d]: ele
             for ele in attr_left
-        }
+        }        
         for data_obj_right in attr_right:
             data_obj_right.source = [source_map[nsr] for nsr in data_obj_right.source]
 
@@ -210,8 +211,8 @@ def merge_strains(left_strain: Strain, right_strain: Strain) -> Strain:
                     for related_data_str in data_obj_right.relatedData
                 ]
             hash_right = DeepHash(
-                data_obj_right, exclude_paths=["source", "relatedData"]
-            )[data_obj_right]
+                (data_obj_right_d := data_obj_right.model_dump()), exclude_paths=["source", "relatedData"]
+            )[data_obj_right_d]
             same_obj = deep_hash.get(hash_right, None)
             if same_obj:
                 same_obj.source.extend(_merge_object_source(same_obj, data_obj_right))
